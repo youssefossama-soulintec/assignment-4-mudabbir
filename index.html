@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدبّر | إدارة أموالك بذكاء</title>
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-body">
+
+    <div class="row g-0">
+        <!-- الشريط الجانبي (سطح المكتب) -->
+        <aside class="d-none lg:d-block lg:col-3 xl:col-2 lg:sticky-top lg:align-self-start vh-100 overflow-auto bg-body border-end p-4">
+            <div class="d-flex align-items-center gap-3 mb-4">
+                <span class="avatar avatar-xl theme-primary rounded-5 fs-2xl shadow-primary"><img class="avatar-img p-5" src="images/coins-solid-full.png" alt=""></span>
+                <div>
+                    <h2 class=" fw-bold mb-0">مدبّر</h2><p class="fg-3 ">إدارة أموالك بذكاء</p>
+                </div>
+            </div>
+            <nav class="nav flex-column gap-1">
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 active bg-subtle-primary fg-primary fw-semibold" href="#" aria-current="page"><i class="bi bi-house-fill"></i> الصفحة الرئيسية</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><i class="bi bi-arrow-left-right"></i> المعاملات</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><i class="bi bi-pie-chart-fill"></i> الميزانيات</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><i class="bi bi-piggy-bank-fill"></i> المدخرات</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><i class="bi bi-file-earmark-text-fill"></i> الفواتير الشهرية</a>
+            </nav>
+            <h3 class="h6 fw-semibold my-3 px-2">إجراءات سريعة</h3>
+            <nav class="nav flex-column gap-1">
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><span class="avatar avatar-subtle theme-primary rounded-4"><i class="bi bi-send-fill"></i></span> إرسال أموال</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><span class="avatar avatar-subtle theme-success rounded-4"><i class="bi bi-plus-lg"></i></span> إضافة أموال</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><span class="avatar avatar-subtle theme-accent rounded-4"><i class="bi bi-receipt"></i></span> دفع فاتورة</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><span class="avatar avatar-subtle theme-warning rounded-4"><i class="bi bi-graph-up-arrow"></i></span> استثمار</a>
+            </nav>
+        </aside>
+
+        <main class="col-12 lg:col-9 xl:col-10 p-3 lg:p-4 xl:p-5 min-w-0">
+            <!-- الهيدر -->
+            <div class="card mb-4">
+                <div class="d-flex justify-content-between align-items-center p-3 lg:p-4">
+                    <div class="d-flex align-items-center gap-3">
+                        <button type="button" class="btn btn-outline btn-icon lg:d-none" data-bs-toggle="drawer" data-bs-target="#sideMenu" aria-label="القائمة"><i class="bi bi-list"></i></button>
+                        <span class="avatar avatar-xl theme-primary rounded-5 fs-2xl shadow-primary d-none sm:d-inline-flex"><img class="avatar-img p-5" src="images/coins-solid-full.png" alt=""></span>
+                        <div>
+                            <h2 class="h4 fw-bold mb-0">مدبّر</h2><small class="fg-3 d-none sm:d-inline">إدارة أموالك بذكاء</small>
+                        </div>
+                        <span class="badge badge-lg badge-subtle theme-success ms-3 d-none md:d-inline-flex">متصل ●</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <button type="button" class="btn btn-outline btn-icon position-relative  avatar avatar-subtle rounded-5"  aria-label="الإشعارات"><i class="bi bi-bell"></i><span class="badge theme-danger rounded-circle position-absolute top-0 start-0 translate-middle">2</span></button>
+                        <button type="button" class="btn btn-outline btn-icon  avatar avatar-subtle rounded-5" aria-label="بحث"><i class="bi bi-search"></i></button>
+                        <div class="card flex-row align-items-center gap-2 p-2 pe-3 hover-lift">
+                            <span class="avatar avatar-lg"><img class="avatar-img" src="images/avatar-1.jpg" alt="User Avatar"></span>
+                            <div class="lh-sm">
+                                <div class="fw-semibold">سيف أسامة</div><small class="fg-3">حساب مميز</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الإحصائيات -->
+            <div class="row g-4 mb-4">
+                <div class="col-12 md:col-6 xl:col-4">
+                    <div class="card hover-lift p-4 lg:p-5">
+                        <div class="fg-3">الرصيد الحالي</div>
+                        <div class="fs-3xl fw-bold my-2">8,450 جنية</div>
+                        <div class="fg-success"><i class="bi bi-arrow-up"></i> +2.5%</div>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6 xl:col-4">
+                    <div class="card hover-lift p-4 lg:p-5">
+                        <div class="fg-3">الدخل</div>
+                        <div class="fs-3xl fw-bold my-2">15,000 جنية</div>
+                        <div class="fg-success"><i class="bi bi-arrow-up"></i> +8.2%</div>
+                    </div>
+                </div>
+                <div class="col-12 md:col-12 xl:col-4">
+                    <div class="card hover-lift p-4 lg:p-5">
+                        <div class="fg-3">المصروفات</div>
+                        <div class="fs-3xl fw-bold my-2">10,000 جنية</div>
+                        <div class="fg-danger"><i class="bi bi-arrow-down-short"></i> -1.2%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الأنشطة + المعاملات -->
+            <div class="row g-4 mb-4">
+                <div class="col-12 xl:col-4">
+                  <div class="row g-4">
+                    <div class="col-12 md:col-6 xl:col-12">
+                    <div class="card card-body h-100">
+                        <h3 class="h5 fw-bold mb-3">الأنشطة الحديثة</h3>
+                        <div class="rounded-4 border-end border-4 border-primary bg-subtle-primary hover-lift p-3 mb-3">
+                            <div class="d-flex gap-3">
+                                <span class="avatar avatar-subtle theme-primary flex-shrink-0"><i class="bi bi-person-plus-fill"></i></span>
+                                <div>
+                                    <div class="fw-semibold">إنشاء حساب توفير جديد <span class="badge badge-subtle theme-primary">حساب</span></div>
+                                    <small class="fg-3">تم إنشاء حساب توفير بنك الأهلي بنجاح</small><br><small class="fg-3">منذ ساعة واحدة</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-4 border-end border-4 border-success bg-subtle-success hover-lift p-3 mb-3">
+                            <div class="d-flex gap-3">
+                                <span class="avatar avatar-subtle theme-success flex-shrink-0"><i class="bi bi-credit-card-2-front-fill"></i></span>
+                                <div>
+                                    <div class="fw-semibold">إضافة بطاقة جديدة <span class="badge badge-subtle theme-success">بطاقة</span></div>
+                                    <small class="fg-3">تمت إضافة بطاقة Visa الجديدة ****2847</small><br><small class="fg-3">منذ 3 ساعات</small>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="text-center"><a href="#">عرض جميع الأنشطة (23)</a></div>
+                    </div>
+                    </div>
+                    <div class="col-12 md:col-6 xl:col-12">
+                    <div class="card card-body h-100">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h3 class="h5 fw-bold mb-0">الفواتير الشهرية</h3><a href="#" class="icon-link icon-link-hover">عرض الكل <i class="bi bi-chevron-left"></i></a>
+                        </div>
+                        <div class="text-center my-3">
+                            <div class="fs-2xl fw-bold">1920 جنية</div>
+                            <div class="fg-3">إجمالي الفواتير الشهرية</div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-12 sm:col-6">
+                                <div class="card hover-lift text-center p-3 h-100">
+                                    <span class="avatar avatar-lg avatar-subtle theme-primary rounded-4 mx-auto"><i class="bi bi-wifi"></i></span>
+                                    <small class="fg-3 d-block mt-2">إنترنت</small>
+                                    <div class="fw-semibold">450 جنية</div>
+                                    <small class="fg-danger">يستحق في 3 أيام</small>
+                                </div>
+                            </div>
+                            <div class="col-12 sm:col-6">
+                                <div class="card hover-lift text-center p-3 h-100">
+                                    <span class="avatar avatar-lg avatar-subtle theme-warning rounded-4 mx-auto"><i class="bi bi-lightning-fill"></i></span>
+                                    <small class="fg-3 d-block mt-2">كهرباء</small>
+                                    <div class="fw-semibold">400 جنية</div>
+                                    <small class="fg-danger">يستحق في 5 أيام</small>
+                                </div>
+                            </div>
+                            <div class="col-12 sm:col-6">
+                                <div class="card hover-lift text-center p-3 h-100">
+                                    <span class="avatar avatar-lg avatar-subtle theme-success rounded-4 mx-auto"><i class="bi bi-telephone-fill"></i></span>
+                                    <small class="fg-3 d-block mt-2">هاتف</small>
+                                    <div class="fw-semibold">290 جنية</div>
+                                    <small class="fg-success">يستحق في 10 أيام</small>
+                                </div>
+                            </div>
+                            <div class="col-12 sm:col-6">
+                                <div class="card hover-lift text-center p-3 h-100">
+                                    <span class="avatar avatar-lg avatar-subtle theme-danger rounded-4 mx-auto"><i class="bi bi-display"></i></span>
+                                    <small class="fg-3 d-block mt-2">Netflix</small>
+                                    <div class="fw-semibold">780 جنية</div>
+                                    <small class="fg-3">يستحق في 15 يوم</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 xl:col-8">
+                    <div class="card card-body h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h3 class="h5 fw-bold mb-0">المعاملات الأخيرة</h3><a href="#" class="icon-link icon-link-hover">عرض الكل <i class="bi bi-chevron-left"></i></a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>المعاملة</th>
+                                        <th>الفئة</th>
+                                        <th>التاريخ</th>
+                                        <th>الحالة</th>
+                                        <th>المبلغ</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-3"><span class="avatar avatar-lg"><img class="avatar-img" src="images/avatar-2.jpg" alt=""></span>
+                                                <div>
+                                                    <div class="fw-semibold">محمود النجار</div><small class="fg-3">تحويل أموال</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-subtle theme-success"><i class="bi bi-arrow-down"></i> دخل</span></td>
+                                        <td>١٤ أكتوبر ٢٠٢٥</td>
+                                        <td><span class="badge badge-subtle theme-success">مكتمل</span></td>
+                                        <td class="fw-semibold fg-success">+350 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-3"><span class="avatar avatar-lg avatar-subtle theme-warning rounded-4"><i class="bi bi-cup-hot"></i></span>
+                                                <div>
+                                                    <div class="fw-semibold">مطعم Meat moot</div><small class="fg-3">دفع مطعم</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-subtle theme-warning"><i class="bi bi-cup-hot"></i> طعام</span></td>
+                                        <td>14 أكتوبر، 2025</td>
+                                        <td><span class="badge badge-subtle theme-success">مكتمل</span></td>
+                                        <td class="fw-semibold ">-2200 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-3"><span class="avatar avatar-lg avatar-subtle theme-primary rounded-4"><i class="bi bi-cart3"></i></span>
+                                                <div>
+                                                    <div class="fw-semibold">مشتريات Amazon</div><small class="fg-3">تسوق إلكتروني</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-subtle theme-primary"><i class="bi bi-cart3"></i> تسوق</span></td>
+                                        <td>13 أكتوبر، 2025</td>
+                                        <td><span class="badge badge-subtle theme-success">مكتمل</span></td>
+                                        <td class="fw-semibold ">-1250 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-3"><span class="avatar avatar-lg"><img class="avatar-img" src="images/avatar-1.jpg" alt=""></span>
+                                                <div>
+                                                    <div class="fw-semibold">عمر المهدي</div><small class="fg-3">دفع فاتورة مقسمة</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-subtle theme-accent"><i class="bi bi-people-fill"></i> فاتورة مقسمة</span></td>
+                                        <td>13 أكتوبر، 2025</td>
+                                        <td><span class="badge badge-subtle theme-success">مكتمل</span></td>
+                                        <td class="fw-semibold ">-1400 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-3"><span class="avatar avatar-lg"><img class="avatar-img" src="images/avatar-3.jpg" alt=""></span>
+                                                <div>
+                                                    <div class="fw-semibold">محمد عوض</div><small class="fg-3">دفع عمل حر</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-subtle theme-success"><i class="bi bi-briefcase-fill"></i> عمل</span></td>
+                                        <td>12 أكتوبر، 2025</td>
+                                        <td><span class="badge badge-subtle theme-success">مكتمل</span></td>
+                                        <td class="fw-semibold fg-success">+2500 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-3"><span class="avatar avatar-lg avatar-subtle theme-danger rounded-4"><i class="bi bi-fuel-pump-fill"></i></span>
+                                                <div>
+                                                    <div class="fw-semibold">محطة وقود Shell</div><small class="fg-3">شراء وقود</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-subtle theme-danger"><i class="bi bi-car-front-fill"></i> مواصلات</span></td>
+                                        <td>12 أكتوبر، 2025</td>
+                                        <td><span class="badge badge-subtle theme-warning">معلق</span></td>
+                                        <td class="fw-semibold ">-700 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-3"><span class="avatar avatar-lg avatar-subtle theme-accent rounded-4"><i class="bi bi-film"></i></span>
+                                                <div>
+                                                    <div class="fw-semibold">اشتراك Netflix</div><small class="fg-3">اشتراك شهري</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-subtle theme-accent"><i class="bi bi-display"></i> ترفيه</span></td>
+                                        <td>11 أكتوبر، 2025</td>
+                                        <td><span class="badge badge-subtle theme-success">مكتمل</span></td>
+                                        <td class="fw-semibold ">-780 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-3"><span class="avatar avatar-lg avatar-subtle theme-info rounded-4"><i class="bi bi-bicycle"></i></span>
+                                                <div>
+                                                    <div class="fw-semibold">نادي FitLife</div><small class="fg-3">عضوية شهرية</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-subtle theme-info"><i class="bi bi-heart-pulse-fill"></i> صحة</span></td>
+                                        <td>10 أكتوبر، 2025</td>
+                                        <td><span class="badge badge-subtle theme-success">مكتمل</span></td>
+                                        <td class="fw-semibold ">-500 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-3"><span class="avatar avatar-lg avatar-subtle theme-success rounded-4"><i class="bi bi-mortarboard-fill"></i></span>
+                                                <div>
+                                                    <div class="fw-semibold">كورس Jonas</div><small class="fg-3">دورة تدريبية</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-subtle theme-success"><i class="bi bi-mortarboard-fill"></i> تعليم</span></td>
+                                        <td>9 أكتوبر، 2025</td>
+                                        <td><span class="badge badge-subtle theme-success">مكتمل</span></td>
+                                        <td class="fw-semibold ">-250 جنية</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الميزانية + التحليل + وسائل الدفع -->
+            <div class="row g-4">
+                <div class="col-12 md:col-6 xl:col-4">
+                    <div class="card card-body h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h3 class="h5 fw-bold mb-0">نظرة عامة على الميزانية</h3><a href="#" class="icon-link icon-link-hover">التفاصيل <i class="bi bi-chevron-left"></i></a>
+                        </div>
+                        <div class="card bg-subtle-primary border-primary hover-lift p-3 mb-3">
+                            <div class="d-flex justify-content-between">
+                                <div><small class="fg-primary">إجمالي الميزانية</small>
+                                    <div class="fs-xl fw-bold">10000 جنية</div>
+                                </div>
+                                <div><small class="fg-3">المتبقي</small>
+                                    <div class="fs-lg fw-bold fg-success">1750 جنية</div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between text-sm my-2"><span>المستخدم: 8250 جنية</span><span>82.5%</span></div>
+                            <div class="progress"><div class="progress-bar theme-primary col-10"></div></div>
+                        </div>
+                        <div class="card hover-lift p-3 mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3 align-items-center"><span class="avatar avatar-lg avatar-subtle theme-warning rounded-4"><i class="bi bi-film"></i></span>
+                                    <div>
+                                        <div class="fw-semibold">ترفيه</div><small class="fg-3">الميزانية: 1500 جنية</small>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <div class="fw-semibold">750 جنية</div><span class="badge badge-subtle theme-success">متبقي 50%</span>
+                                </div>
+                            </div>
+                            <div class="progress mt-3"><div class="progress-bar theme-warning col-6"></div></div>
+                        </div>
+                        <div class="card hover-lift p-3 mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3 align-items-center"><span class="avatar avatar-lg avatar-subtle theme-danger rounded-4"><i class="bi bi-file-earmark-text-fill"></i></span>
+                                    <div>
+                                        <div class="fw-semibold">فواتير</div><small class="fg-3">الميزانية: 2000 جنية</small>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <div class="fw-semibold">2000 جنية</div><span class="badge badge-subtle theme-danger">مستخدم 100%</span>
+                                </div>
+                            </div>
+                            <div class="progress mt-3"><div class="progress-bar theme-danger col-12"></div></div>
+                        </div>
+                        <div class="card hover-lift p-3 mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3 align-items-center"><span class="avatar avatar-lg avatar-subtle theme-accent rounded-4"><i class="bi bi-heart-fill"></i></span>
+                                    <div>
+                                        <div class="fw-semibold">العناية الشخصية</div><small class="fg-3">الميزانية: 1500 جنية</small>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <div class="fw-semibold">1200 جنية</div><span class="badge badge-subtle theme-warning">متبقي 20%</span>
+                                </div>
+                            </div>
+                            <div class="progress mt-3"><div class="progress-bar theme-accent col-10"></div></div>
+                        </div>
+                        <div class="card hover-lift p-3 mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3 align-items-center"><span class="avatar avatar-lg avatar-subtle theme-success rounded-4"><i class="bi bi-cart3"></i></span>
+                                    <div>
+                                        <div class="fw-semibold">مستلزمات المنزل</div><small class="fg-3">الميزانية: 5000 جنية</small>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <div class="fw-semibold">4300 جنية</div><span class="badge badge-subtle theme-success">متبقي 14%</span>
+                                </div>
+                            </div>
+                            <div class="progress mt-3"><div class="progress-bar theme-success col-10"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6 xl:col-4">
+                    <div class="card card-body mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h3 class="h5 fw-bold mb-0">الدخل مقابل المصروفات</h3><a href="#" class="icon-link icon-link-hover">التحليل <i class="bi bi-chevron-left"></i></a>
+                        </div>
+                        <div class="text-sm fg-3 mb-3"><span class="me-3"><i class="bi bi-square-fill fg-success"></i> الدخل</span><i class="bi bi-square-fill fg-danger"></i> المصروفات</div>
+                        <div class="ratio-16x9 d-flex justify-content-around align-items-end w-100">
+                            <div class="d-contents">
+                                <div class="d-flex gap-1 align-items-end h-100"><span class="w-1 h-50 bg-danger rounded-top-3 hover-lift"></span><span class="w-1 h-100 bg-success rounded-top-3 hover-lift"></span></div>
+                                <div class="d-flex gap-1 align-items-end h-100"><span class="w-1 h-50 bg-danger rounded-top-3 hover-lift"></span><span class="w-1 h-75 bg-success rounded-top-3 hover-lift"></span></div>
+                                <div class="d-flex gap-1 align-items-end h-100"><span class="w-1 h-50 bg-danger rounded-top-3 hover-lift"></span><span class="w-1 h-100 bg-success rounded-top-3 hover-lift"></span></div>
+                                <div class="d-flex gap-1 align-items-end h-100"><span class="w-1 h-50 bg-danger rounded-top-3 hover-lift"></span><span class="w-1 h-100 bg-success rounded-top-3 hover-lift"></span></div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-around text-sm fg-3 mt-2"><span>الأسبوع 1</span><span>الأسبوع 2</span><span>الأسبوع 3</span><span>الأسبوع 4</span></div>
+                    </div>
+                    <div class="card card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h3 class="h5 fw-bold mb-0">ملخص الحساب</h3><a href="#" class="icon-link icon-link-hover">التفاصيل <i class="bi bi-chevron-left"></i></a>
+                        </div>
+                        <div class="card hover-lift flex-row justify-content-between align-items-center p-3 mb-3">
+                            <div class="d-flex gap-3 align-items-center"><span class="avatar avatar-lg avatar-subtle theme-primary rounded-4"><i class="bi bi-bank2"></i></span>
+                                <div>
+                                    <div class="fw-semibold">حساب جاري</div><small class="fg-3">بنك مصر [•••• 4532]</small>
+                                </div>
+                            </div><b>8,450 جنية</b>
+                        </div>
+                        <div class="card hover-lift flex-row justify-content-between align-items-center p-3 mb-3">
+                            <div class="d-flex gap-3 align-items-center"><span class="avatar avatar-lg avatar-subtle theme-success rounded-4"><i class="bi bi-piggy-bank-fill"></i></span>
+                                <div>
+                                    <div class="fw-semibold">حساب التوفير</div><small class="fg-3">بنك مصر [•••• 8901]</small>
+                                </div>
+                            </div><b>297,540 جنية</b>
+                        </div>
+                        <div class="card hover-lift flex-row justify-content-between align-items-center p-3">
+                            <div class="d-flex gap-3 align-items-center"><span class="avatar avatar-lg avatar-subtle theme-accent rounded-4"><i class="bi bi-credit-card-fill"></i></span>
+                                <div>
+                                    <div class="fw-semibold">بطاقة ائتمان</div><small class="fg-3">متاح: 1,850 جنية من 2,500 جنية</small>
+                                </div>
+                            </div><b class="fg-danger">- 6,000 جنية</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 xl:col-4">
+    <div class="card card-body h-100">
+
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h3 class="h5 fw-bold mb-0">وسائل الدفع</h3>
+
+            <a href="#" class="icon-link icon-link-hover">
+                إدارة
+                <i class="bi bi-chevron-left"></i>
+            </a>
+        </div>
+
+        <div class="row g-3">
+
+            <!-- Card 1 -->
+            <div class="col-12 sm:col-6 md:col-4 xl:col-12">
+
+                <div class="card bg-primary fg-white border-0 rounded-5 hover-lift p-4">
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <i class="bi bi-sim fs-2xl opacity-75"></i>
+                        <span class="badge bg-white fg-body">أساسية</span>
+                    </div>
+
+                    <div class="fs-xl fw-semibold my-4" dir="rtl">
+                        •••• •••• •••• 4532
+                    </div>
+
+                    <div class="d-flex justify-content-between text-sm">
+                        <span>
+                            حامل البطاقة<br>
+                            <b>سيف أسامة</b>
+                        </span>
+
+                        <span>
+                            تنتهي<br>
+                            <b>12/26</b>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 sm:col-6 md:col-4 xl:col-12">
+
+                <div class="card bg-danger fg-white border-0 rounded-5 hover-lift p-4">
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <i class="bi bi-sim fs-2xl opacity-75"></i>
+                    </div>
+
+                    <div class="fs-xl fw-semibold my-4" dir="rtl">
+                        •••• •••• •••• 8901
+                    </div>
+
+                    <div class="d-flex justify-content-between text-sm">
+                        <span>
+                            حامل البطاقة<br>
+                            <b>سيف أسامة</b>
+                        </span>
+
+                        <span>
+                            تنتهي<br>
+                            <b>08/27</b>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 sm:col-6 md:col-4 xl:col-12">
+
+                <div class="card bg-primary fg-white border-0 rounded-5 hover-lift p-4">
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <i class="bi bi-paypal fs-2xl"></i>
+                        <i class="bi bi-sim fs-2xl opacity-75"></i>
+                    </div>
+
+                    <div class="fs-lg fw-semibold my-4">
+                        حساب Paypal
+                    </div>
+
+                    <div class="d-flex justify-content-between text-sm">
+                        <span>
+                            الإيميل<br>
+                            <b>seif@example.com</b>
+                        </span>
+
+                        <span>
+                            الحالة<br>
+                            <b class="fg-success">موثق</b>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+            </div>
+        </main>
+    </div>
+
+    <!-- القائمة الجانبية (الموبايل والتابلت) -->
+    <dialog class="drawer drawer-start drawer-instant" id="sideMenu" aria-label="القائمة">
+        <div class="drawer-header"><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="إغلاق"></button></div>
+        <div class="drawer-body">
+            <div class="d-flex align-items-center gap-3 mb-4">
+                <span class="avatar avatar-xl theme-primary rounded-5 fs-2xl shadow-primary"><i class="bi bi-coin"></i></span>
+                <div>
+                    <h2 class="h4 fw-bold mb-0">مدبّر</h2><small class="fg-3">إدارة أموالك بذكاء</small>
+                </div>
+            </div>
+            <nav class="nav flex-column gap-1">
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 active bg-subtle-primary fg-primary fw-semibold" href="#" aria-current="page"><i class="bi bi-house-fill"></i> الصفحة الرئيسية</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><i class="bi bi-arrow-left-right"></i> المعاملات</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><i class="bi bi-pie-chart-fill"></i> الميزانيات</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><i class="bi bi-piggy-bank-fill"></i> المدخرات</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><i class="bi bi-file-earmark-text-fill"></i> الفواتير الشهرية</a>
+            </nav>
+            <h3 class="h6 fw-semibold my-3 px-2">إجراءات سريعة</h3>
+            <nav class="nav flex-column gap-1">
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><span class="avatar avatar-subtle theme-primary rounded-4"><i class="bi bi-send-fill"></i></span> إرسال أموال</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><span class="avatar avatar-subtle theme-success rounded-4"><i class="bi bi-plus-lg"></i></span> إضافة أموال</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><span class="avatar avatar-subtle theme-accent rounded-4"><i class="bi bi-receipt"></i></span> دفع فاتورة</a>
+                <a class="nav-link d-flex align-items-center justify-content-start gap-3 rounded-4 fg-body" href="#"><span class="avatar avatar-subtle theme-warning rounded-4"><i class="bi bi-graph-up-arrow"></i></span> استثمار</a>
+            </nav>
+        </div>
+    </dialog>
+
+    <script type="module" src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
